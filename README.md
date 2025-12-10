@@ -10,13 +10,13 @@ TechNova Solutions is migrating part of their Healthcare Platform to AWS.Your go
 
 This project includes:
 
-✔ 2-Tier Infra (Web + DB)
-✔ IAM Security
-✔ Network Security
-✔ CloudWatch Monitoring + Logs
-✔ CPU Alerting✔ Failure Simulation & Troubleshooting
-✔ Backup + Rollback
-✔ Automation using Terraform
+- ✔ 2-Tier Infra (Web + DB)
+- ✔ IAM Security
+- ✔ Network Security
+- ✔ CloudWatch Monitoring + Logs
+- ✔ CPU Alerting✔ Failure Simulation & Troubleshooting
+- ✔ Backup + Rollback
+- ✔ Automation using Terraform
 
 **🏗 Architecture Overview**
 ----------------------------
@@ -157,7 +157,12 @@ You can restore either snapshot manually via AWS Console to confirm rollback.
 **📁 Project Structure**
 ------------------------
 ```bash
-TechNova-CloudOps-Project-Full-AWS-Infrastructure-Security-Monitoring-Build │── main.tf  │── providers.tf  │── variables.tf  │── web_userdata.tpl  │── README.md
+TechNova-CloudOps-Project-Full-AWS-Infrastructure-Security-Monitoring-Build
+    │── main.tf
+    │── providers.tf
+    │── variables.tf
+    │── web_userdata.tpl
+    │── README.md
 ```
 
 **🚀 Deployment Instructions**
@@ -165,11 +170,16 @@ TechNova-CloudOps-Project-Full-AWS-Infrastructure-Security-Monitoring-Build │�
 
 ### **1\. Clone the repo**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   git clone https://github.com/yourusername/technova-cloud.git  cd technova-cloud   `
+```bash
+git clone https://github.com/147Ayush/TechNova-CloudOps-Project-Full-AWS-Infrastructure-Security-Monitoring-Build.git
+cd technova-cloud   
+```
 
 ### **2\. Initialize Terraform**
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   terraform init   `
+```bash
+ terraform init   
+```
 
 ### **3\. Review or update variables**
 
@@ -183,9 +193,9 @@ Edit variables.tfEspecially:
     
 
 ### **4\. Apply the infrastructure**
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   terraform apply   `
-
+```bash
+terraform apply
+```
 Confirm with **yes**.
 
 ### **5\. Outputs**
@@ -198,25 +208,35 @@ After apply, Terraform prints:
     
 *   IAM Support User Access Keys
     
-
-Visit the web page:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   http://   `
-
 You should see:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   TechNova Web Tier Active   `
+```bash
+echNova-CloudOps-Project-Full-AWS-Infrastructure-Security-Monitoring-Build Tier Active
+```
 
 **🗂 How to Insert Sample DB Data**
 -----------------------------------
 
 SSH into web server or use local MySQL client:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   CREATE TABLE Patients (    id INT AUTO_INCREMENT PRIMARY KEY,    name VARCHAR(100),    age INT  );  CREATE TABLE Diagnostics (    id INT AUTO_INCREMENT PRIMARY KEY,    patient_id INT,    report VARCHAR(255)  );  INSERT INTO Patients(name, age) VALUES  ('John Doe', 45),  ('Lisa Ray', 29),  ('Sam Patel', 34);  INSERT INTO Diagnostics(patient_id, report) VALUES  (1, 'Blood Report: Normal'),  (2, 'X-ray: Clear'),  (3, 'MRI: No issue');   `
+```bash
+CREATE TABLE Patients (    id INT AUTO_INCREMENT PRIMARY KEY,    name VARCHAR(100),    age INT  );
+CREATE TABLE Diagnostics (    id INT AUTO_INCREMENT PRIMARY KEY,    patient_id INT,    report VARCHAR(255)  );
+
+INSERT INTO Patients(name, age) VALUES
+('John Doe', 45),
+('Lisa Ray', 29),
+('Sam Patel', 34);
+
+INSERT INTO Diagnostics(patient_id, report) VALUES
+(1, 'Blood Report: Normal'),
+(2, 'X-ray: Clear'),
+(3, 'MRI: No issue');
+```  
 
 **⚠️ Cleanup**
 --------------
 
 Stop billing when done:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   terraform destroy   `
+```bash
+terraform destroy 
+```
