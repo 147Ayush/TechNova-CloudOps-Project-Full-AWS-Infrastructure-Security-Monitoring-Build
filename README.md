@@ -14,7 +14,8 @@ This project includes:
 - ✔ IAM Security
 - ✔ Network Security
 - ✔ CloudWatch Monitoring + Logs
-- ✔ CPU Alerting✔ Failure Simulation & Troubleshooting
+- ✔ CPU Alerting
+- ✔ Failure Simulation & Troubleshooting
 - ✔ Backup + Rollback
 - ✔ Automation using Terraform
 
