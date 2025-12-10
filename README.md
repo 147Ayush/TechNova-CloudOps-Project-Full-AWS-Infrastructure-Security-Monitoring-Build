@@ -108,7 +108,7 @@ A restricted IAM user **support-user** with:
 
 Log group:
 ```bash
-/technova-cloud/web-logs
+/TechNova-CloudOps-Project-Full-AWS-Infrastructure-Security-Monitoring-Build/web-logs
 ```
 ### **Alert**
 
