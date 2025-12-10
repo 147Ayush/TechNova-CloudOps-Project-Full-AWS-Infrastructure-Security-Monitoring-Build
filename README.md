@@ -10,7 +10,13 @@ TechNova Solutions is migrating part of their Healthcare Platform to AWS.Your go
 
 This project includes:
 
-✔ 2-Tier Infra (Web + DB)✔ IAM Security✔ Network Security✔ CloudWatch Monitoring + Logs✔ CPU Alerting✔ Failure Simulation & Troubleshooting✔ Backup + Rollback✔ Automation using Terraform
+✔ 2-Tier Infra (Web + DB)
+✔ IAM Security
+✔ Network Security
+✔ CloudWatch Monitoring + Logs
+✔ CPU Alerting✔ Failure Simulation & Troubleshooting
+✔ Backup + Rollback
+✔ Automation using Terraform
 
 **🏗 Architecture Overview**
 ----------------------------
